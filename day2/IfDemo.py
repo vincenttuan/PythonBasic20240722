@@ -1,7 +1,8 @@
 # if elif else 條件判斷應用
 # 1.判斷是否及格
 # 2.判斷級別是 A, B, C, D, F
-score = 75
+score = input('請輸入成績:')  # input 會得到字串資料
+score = int(score)  # 將字串轉整數, 注意 ! 一定要加
 print("成績:", score, end=" ")
 
 # 1.判斷是否及格
