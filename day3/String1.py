@@ -1,5 +1,5 @@
 # 字串分析
-words = "she sell sea shell om the sea shore"
+words = "she sell sea shell on the sea shore"
 print(words)
 print("有幾個 sea:", words.count("sea"))  # 有幾個 sea
 print("有幾個 s:", words.count("s"))  # 有幾個 s
