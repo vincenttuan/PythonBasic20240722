@@ -1,5 +1,5 @@
 
-def calcBmi(index):
+def calc_bmi(index):
     h = float(heights[index])
     w = float(weights[index])
     bmi = w / (h / 100) ** 2
@@ -16,7 +16,7 @@ heights = data1.split(",")
 weights = data2.split(",")
 print(heights, weights)
 #--------------------------------
-calcBmi(0)
-calcBmi(1)
-calcBmi(2)
+calc_bmi(0)
+calc_bmi(1)
+calc_bmi(2)
 
