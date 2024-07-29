@@ -12,5 +12,15 @@ if __name__ == '__main__':
         else:
             print('使用者猜中了, 好棒棒~')
             break  # 強制離開迴圈
+        #-----------------------------------------------
+        pc_guess = random.randint(1, 9)
+        print('電腦所猜的輸入數字(1~9):%d' % pc_guess)
+        if pc_guess < ans:
+            print('電腦猜小了')
+        elif pc_guess > ans:
+            print('電腦猜大了')
+        else:
+            print('電腦猜中了, 電腦好棒棒~')
+            break  # 強制離開迴圈
 
     print("Game Over!")
