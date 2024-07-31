@@ -1,8 +1,8 @@
 # 利用 for 模擬搭電梯
 import time
 
-min = 1  # 最低樓層
-max = 7  # 最高樓層
+min = int(input('請輸入最低樓層:'))  # 最低樓層
+max = int(input('請輸入最高樓層:'))  # 最高樓層
 print('本大樓有%d~%d層' % (min, max))
 target_floor = int(input('請輸入樓層:'))
 # 防呆
