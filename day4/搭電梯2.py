@@ -7,7 +7,11 @@ if __name__ == '__main__':
     print('本大樓有 %d~%d 層' % (min, max))
     current_floor = min  # 目前電梯所在位置
     while True:
-        target_floor = int(input('請輸入目標樓層:'))
+        target_floor = int(input('請輸入目標樓層(輸入0退出程式):'))
+        # 判斷 target_floor 是否式 0
+        if target_floor == 0:
+            break  # 跳離 while 迴圈
+
         if min <= target_floor <= max:
             # 電梯運作邏輯
             if target_floor > current_floor:
