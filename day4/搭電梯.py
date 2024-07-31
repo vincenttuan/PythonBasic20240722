@@ -1,11 +1,13 @@
 # 利用 for 模擬搭電梯
 import time
 
-print('本大樓有1~7層')
+min = 1  # 最低樓層
+max = 7  # 最高樓層
+print('本大樓有%d~%d層' % (min, max))
 target_floor = int(input('請輸入樓層:'))
 # 防呆
-if 1 <= target_floor <= 7:
-    for floor in range(1, 8):
+if min <= target_floor <= max:
+    for floor in range(min, max + 1):
         print('電梯上樓', floor)
         time.sleep(1)  # 停一秒
         if floor == target_floor:
