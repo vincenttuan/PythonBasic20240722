@@ -16,7 +16,7 @@ if __name__ == '__main__':
                 direction = '下樓'
             else:  # 目標樓層就是目前電梯所在地
                 continue  # 重跑 while 回圈
-
+            # ----------------------------------------------------------
             while current_floor != target_floor:
                 print('電梯 %s 目前在 %d 樓' % (direction, current_floor))
                 time.sleep(1)
@@ -24,7 +24,7 @@ if __name__ == '__main__':
                     current_floor = current_floor + 1  # 每次 +1
                 else:
                     current_floor = current_floor - 1  # 每次 -1
-
+            # ----------------------------------------------------------
             print('電梯已到 %d 樓' % current_floor)
 
         else:
