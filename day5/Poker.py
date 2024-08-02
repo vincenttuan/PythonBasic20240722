@@ -21,3 +21,10 @@ if __name__ == '__main__':
     print("card1: %s, card2: %s" % (card1, card2))
     print(poker)
     print(len(poker))
+    # 比較大小
+    if dict[card1] > dict[card2]:
+        print("card1 贏")
+    elif dict[card1] < dict[card2]:
+        print("card2 贏")
+    else:
+        print("平手")
