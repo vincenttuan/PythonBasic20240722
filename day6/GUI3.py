@@ -10,11 +10,17 @@ import tkinter
 '''
 # 自動 + 1
 def add():
-    pass
+    # 目前 Label 上的數字資料
+    # 因為 number.get() 會得到字串所以要透過 int() 轉型
+    current_value = int(number.get())
+    # +1 變成新的資料
+    new_value = current_value + 1
+    # 將 new_value 轉為字串並設定到 number 中
+    number.set(str(new_value))
 
 # 離開視窗
 def win_exit():
-    pass
+    win.destroy()  # 視窗銷毀
 
 if __name__ == '__main__':
     win = tkinter.Tk()
