@@ -10,6 +10,10 @@ import tkinter
 '''
 # 自動 + 1
 def add():
+    global timer  # 取得主程式中所宣告的 timer
+    if timer == None:  # 第一次按下時就會計時開始
+        timer = win.after(5000, game_over)
+
     # 目前 Label 上的數字資料
     # 因為 number.get() 會得到字串所以要透過 int() 轉型
     current_value = int(number.get())
@@ -18,11 +22,18 @@ def add():
     # 將 new_value 轉為字串並設定到 number 中
     number.set(str(new_value))
 
+def game_over():
+    add_button.config(state=tkinter.DISABLED)  # add 按鈕不可以按
+    print("Game over")
+
 # 離開視窗
 def win_exit():
     win.destroy()  # 視窗銷毀
 
+
 if __name__ == '__main__':
+    timer = None   # 計時器
+
     win = tkinter.Tk()
     win.title("Add Play")
     win.geometry("300x300")
