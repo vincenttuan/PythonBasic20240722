@@ -15,10 +15,20 @@ BMI 計算機
 '''
 
 def submit():  # 計算 bmi
-    pass
+    # 取得身高與體重的資料
+    h = float(height_entry.get())
+    w = float(weight_entry.get())
+    bmi = w / (h/100)**2
+    # 將 bmi 的結果顯示在 GUI 元件上
+    result_label.configure(text="%.2f" % bmi)
 
 def reset():  # 重製
-    pass
+    # 清除欄位
+    height_entry.delete(0, tkinter.END)
+    weight_label.delete(0, tkinter.END)
+    # 還原預設值
+    result_label.configure(text="0.00")
+    
 
 if __name__ == '__main__':
     win = tkinter.Tk()
