@@ -25,3 +25,12 @@ def distance(lat1, lon1, lat2, lon2):
     return distance
 
 
+if __name__ == '__main__':
+    # 台北市大安區忠孝東路四段169號
+    lat1, lon1 = 25.04190, 121.55050
+    # 復興南路一段135巷3號
+    lat2, lon2 = 25.04262, 121.54443
+    d = distance(lat1, lon1, lat2, lon2)
+    print("距離: %.1fm" % d)
+
+
