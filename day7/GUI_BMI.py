@@ -25,10 +25,10 @@ def submit():  # 計算 bmi
 def reset():  # 重製
     # 清除欄位
     height_entry.delete(0, tkinter.END)
-    weight_label.delete(0, tkinter.END)
+    weight_entry.delete(0, tkinter.END)
     # 還原預設值
     result_label.configure(text="0.00")
-    
+
 
 if __name__ == '__main__':
     win = tkinter.Tk()
