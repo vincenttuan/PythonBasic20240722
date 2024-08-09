@@ -26,6 +26,11 @@ if __name__ == '__main__':
             continue
         # 列印所購買的飲料
         print(menu[index])
+        # 判斷餘額是否足夠
+        # 目前訂單總額 + 新訂的飲料金額 > 預算
+        if current_total + menu[index].price > budget:
+            print('超過預算')
+            continue
         # 加入訂單
         order.append(menu[index])
     # -------------------------------------------------------
