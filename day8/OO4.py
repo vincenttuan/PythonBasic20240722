@@ -17,22 +17,27 @@ class Beverage:
         return "%s %s $%d" % (self.name, self.size, self.price)
 
 
-if __name__ == '__main__':
-    # 建立飲料單
-    menu = [
-        Beverage('紅茶', 'S', 10),   # 0
-        Beverage('紅茶', 'M', 15),   # 1
-        Beverage('紅茶', 'L', 20),   # 2
+def get_menu():
+    return [
+        Beverage('紅茶', 'S', 10),  # 0
+        Beverage('紅茶', 'M', 15),  # 1
+        Beverage('紅茶', 'L', 20),  # 2
         Beverage('紅茶冰', 'S', 15),  # 3
         Beverage('紅茶冰', 'M', 20),  # 4
         Beverage('紅茶冰', 'L', 25),  # 5
-        Beverage('綠茶', 'S', 12),    # 6
-        Beverage('綠茶', 'M', 18),    # 7
-        Beverage('綠茶', 'L', 23),    # 8
-        Beverage('奶茶', 'S', 20),    # 9
-        Beverage('奶茶', 'M', 25),    # 10
-        Beverage('奶茶', 'L', 30),    # 11
+        Beverage('綠茶', 'S', 12),  # 6
+        Beverage('綠茶', 'M', 18),  # 7
+        Beverage('綠茶', 'L', 23),  # 8
+        Beverage('奶茶', 'S', 20),  # 9
+        Beverage('奶茶', 'M', 25),  # 10
+        Beverage('奶茶', 'L', 30),  # 11
     ]
+
+
+if __name__ == '__main__':
+    # 建立飲料單
+    menu = get_menu()
+
     print("Menu:")
     print("----------------")
     for beverage in menu:
