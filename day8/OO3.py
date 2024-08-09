@@ -15,4 +15,15 @@ class Student:   # 類別, 建構物件的藍圖
 
 if __name__ == '__main__':
     s1 = Student('John', 16, '男')
-    print(s1)
+    s2 = Student('Mary', 15, '女')
+    s3 = Student('Steven', 10, '男')
+    print(s1, s2, s3)
+    students = [s1, s2, s3]
+    # 年齡總和
+    total_age = sum(student.age for student in students)
+    # 年齡平均
+    average_age = total_age / len(students)
+    print("平均年齡: %.1f 歲" % average_age)
+
+
+
