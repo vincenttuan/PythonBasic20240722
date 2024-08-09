@@ -8,9 +8,14 @@ if __name__ == '__main__':
         print(index, beverage)
     # -------------------------------------
     print("-----------------")
+    # 預算
+    budget = 300
     # 訂單
     order = []
     while True:
+        # 目前已訂購金額
+        current_total = sum(beverage.price for beverage in order)
+        print("預算: %d 已訂購: %d 剩餘: %d" % (budget, current_total, (budget-current_total)))
         data = input('請選擇商品代號(0~11), 離開請輸入(q) ==> ')
         if data == 'q':
             break
