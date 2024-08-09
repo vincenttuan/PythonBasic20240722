@@ -18,7 +18,7 @@ if __name__ == '__main__':
         # 判斷 index 範圍
         if index < 0 or index >= len(menu):
             print('飲料號碼超過範圍')
-            break
+            continue
         # 列印所購買的飲料
         print(menu[index])
         # 加入訂單
