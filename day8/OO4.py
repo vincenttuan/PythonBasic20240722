@@ -44,6 +44,9 @@ if __name__ == '__main__':
     print("----------------")
     for beverage in order:
         print(beverage)
+    # 計算此筆訂單總金額
+    total_sum = sum(beverage.price for beverage in order)
+    print("訂單總金額: %d" % total_sum)
 
 
 
