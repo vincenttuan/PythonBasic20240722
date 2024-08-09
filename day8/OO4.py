@@ -20,22 +20,30 @@ class Beverage:
 if __name__ == '__main__':
     # 建立飲料單
     menu = [
-        Beverage('紅茶', 'S', 10),
-        Beverage('紅茶', 'M', 15),
-        Beverage('紅茶', 'L', 20),
-        Beverage('紅茶冰', 'S', 15),
-        Beverage('紅茶冰', 'M', 20),
-        Beverage('紅茶冰', 'L', 25),
-        Beverage('綠茶', 'S', 12),
-        Beverage('綠茶', 'M', 18),
-        Beverage('綠茶', 'L', 23),
-        Beverage('奶茶', 'S', 20),
-        Beverage('奶茶', 'M', 25),
-        Beverage('奶茶', 'L', 30),
+        Beverage('紅茶', 'S', 10),   # 0
+        Beverage('紅茶', 'M', 15),   # 1
+        Beverage('紅茶', 'L', 20),   # 2
+        Beverage('紅茶冰', 'S', 15),  # 3
+        Beverage('紅茶冰', 'M', 20),  # 4
+        Beverage('紅茶冰', 'L', 25),  # 5
+        Beverage('綠茶', 'S', 12),    # 6
+        Beverage('綠茶', 'M', 18),    # 7
+        Beverage('綠茶', 'L', 23),    # 8
+        Beverage('奶茶', 'S', 20),    # 9
+        Beverage('奶茶', 'M', 25),    # 10
+        Beverage('奶茶', 'L', 30),    # 11
     ]
+    print("Menu:")
+    print("----------------")
     for beverage in menu:
         print(beverage)
 
+    # 訂單
+    order = [menu[0], menu[4], menu[4], menu[4], menu[8], menu[10]]
+    print("\nOrder:")
+    print("----------------")
+    for beverage in order:
+        print(beverage)
 
 
 
