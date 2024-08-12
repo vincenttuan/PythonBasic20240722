@@ -11,4 +11,7 @@ def user_input():
 
 
 if __name__ == '__main__':
-    user_input()
+    try:
+        user_input()
+    except ValueError as e:
+        print("資料輸入錯誤請重新輸入", e)
