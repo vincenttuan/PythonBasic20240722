@@ -1,10 +1,17 @@
 # 登入程式
 import json
+import sys
+
 
 # 載入 user.json 檔案資料
 def load_users():
-    file = open('user.json', 'r')
-    return json.load(file)
+    try:
+        file = open('users.json', 'r')
+    except FileNotFoundError as e:
+        print('檔案找不到:', e)
+        sys.exit(1)  # 1:系統因為有錯誤而離開, 0:正常離開
+    else:
+        return json.load(file)
 
 # 登入檢查
 def login(username, password):
@@ -12,7 +19,7 @@ def login(username, password):
     # ---------------------------------------------------------------------
     for user in users:  #  逐一比對 username / password
         if user['username'] == username and user['password'] == password:
-            return True;
+            return True
     # ---------------------------------------------------------------------
     return False
 
