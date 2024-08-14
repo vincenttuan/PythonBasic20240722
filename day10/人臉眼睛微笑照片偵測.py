@@ -32,6 +32,7 @@ for (x, y, w, h) in faces:
     eyes = eyes_cascade.detectMultiScale(
         roi_gray, scaleFactor=1.1, minNeighbors=50, minSize=(10, 10), flags=cv2.CASCADE_SCALE_IMAGE
     )
+    print("眼睛座標:", eyes)
     # 進行眼睛繪製
     for (ex, ey, ew, eh) in eyes:
         cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
@@ -40,6 +41,7 @@ for (x, y, w, h) in faces:
     smile = smile_cascade.detectMultiScale(
         roi_gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30), flags=cv2.CASCADE_SCALE_IMAGE
     )
+    print("微笑座標:", smile)
     # 進行微笑繪製
     for (sx, sy, sw, sh) in smile:
         cv2.rectangle(roi_color, (sx, sy), (sx+sw, sy+sh), (255, 0, 0), 2)
