@@ -9,6 +9,17 @@ frame = cv2.imread('ai/image/girl.jpg')
 # 印出圖片原始資料
 print(frame)
 
+# 人臉偵測, 得到臉部的(x, y, w, h)
+faces = face_cascade.detectMultiScale(
+    frame,  # 目標圖片
+    scaleFactor=1.1,  # 檢測粒度
+    minNeighbors=5,  # 重複檢測次數
+    minSize=(30, 30),  # 搜尋比對最小尺寸
+    flags=cv2.CASCADE_SCALE_IMAGE  # 比對類型: 影像
+)
+print("臉部座標(x, y, w, h):", faces)
+
+
 # 顯示圖片
 cv2.imshow('My Image', frame)
 
